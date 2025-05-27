@@ -1,1 +1,6 @@
+# 强制所有文本文件使用 LF
 * text eol=lf
+
+# 可针对特定文件类型额外配置（可选）
+*.sh text eol=lf       # Shell 脚本
+*.bat text eol=crlf    # Windows 批处理文件
