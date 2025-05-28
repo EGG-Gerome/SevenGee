@@ -1,4 +1,5 @@
-package base1
+// 这个程序创建了一个监听 1103 端口的 HTTP 服务器，能够返回请求路径或请求头信息，用于测试和演示 HTTP 请求处理。
+package main
 
 import (
 	"fmt"
@@ -28,8 +29,8 @@ func helloHandler(w http.ResponseWriter, req *http.Request) {
 }
 
 // test cmd
-// $ curl http://localhost:1103/
+// $ curl "http://localhost:1103/"
 // URL.Path = "/"
-// $ curl http://localhost:1103/hello
-// Header["Accept"] = ["*/*"]
-// Header["User-Agent"] = ["curl/7.54.0"]
+// $ curl "http://localhost:1103/hello"
+//Header["User-Agent"] = ["curl/8.9.1"]
+//Header["Accept"] = ["*/*"]
