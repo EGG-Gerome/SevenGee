@@ -23,12 +23,14 @@ func indexHandler(w http.ResponseWriter, req *http.Request) {
 
 // handler echoes r.URL.Header
 func helloHandler(w http.ResponseWriter, req *http.Request) {
+	// w http.ResponseWriter 这个接口其底层能够通过值传递来修改数据，所以通常不使用指针。
+
 	for k, v := range req.Header {
 		fmt.Fprintf(w, "Header[%q] = %q\n", k, v)
 	}
 }
 
-// test cmd
+// test command
 // $ curl "http://localhost:1103/"
 // URL.Path = "/"
 // $ curl "http://localhost:1103/hello"
